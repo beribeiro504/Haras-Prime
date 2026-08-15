@@ -1,0 +1,138 @@
+/* ==========================================================================
+   HARAS PRIME - SERVICOS.CSS
+   ========================================================================== */
+.container-servicos {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-servicos {
+    background-color: var(--cor-fundo);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero-servicos h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 38px;
+    color: var(--cor-marrom-escuro);
+    margin: 0;
+}
+
+.subtitulo-servicos {
+    color: #5a3d28;
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.grade-servicos {
+    background-color: var(--cor-fundo-secundaria);
+    padding: 60px 0;
+}
+
+.grade-servicos .container-servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+}
+
+.card-servico {
+    background-color: #ffffff;
+    border: 2px solid var(--cor-borda);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-servico:hover {
+    transform: translateY(-10px);
+}
+
+.imagem-servico {
+    flex: 1;
+    min-width: 200px;
+}
+
+.imagem-servico img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.conteudo-servico {
+    flex: 1.2;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo-servico h3 {
+    font-size: 20px;
+    color: var(--cor-marrom-nobre);
+    margin-bottom: 10px;
+    font-family: var(--fonte-titulo);
+}
+
+.conteudo-servico p {
+    font-size: 14px;
+    color: var(--cor-texto);
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.lista-detalhes {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.lista-detalhes li {
+    font-size: 13px;
+    color: #5a3d28;
+    margin-bottom: 6px;
+    position: relative;
+    padding-left: 18px;
+}
+
+.lista-detalhes li::before {
+    content: "🐎";
+    position: absolute;
+    left: 0;
+    font-size: 12px;
+}
+
+.btn-servico-wpp {
+    margin-top: auto;
+    background: linear-gradient(180deg, var(--cor-marrom-card) 0%, #1f0f06 100%);
+    color: var(--cor-dourado);
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 1px solid var(--cor-borda);
+    transition: 0.3s;
+}
+
+.btn-servico-wpp:hover {
+    background: var(--cor-marrom-nobre);
+    color: #ffffff;
+}
+
+@media (max-width: 600px) {
+    .grade-servicos .container-servicos {
+        grid-template-columns: 1fr;
+    }
+    .card-servico {
+        flex-direction: column;
+    }
+    .imagem-servico {
+        height: 200px;
+    }
+}

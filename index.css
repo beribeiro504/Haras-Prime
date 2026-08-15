@@ -1,0 +1,212 @@
+/* ==========================================================================
+   HARAS PRIME - INDEX.CSS
+   ========================================================================== */
+.secao-principal {
+  width: 100%;
+  padding: 50px 5%;
+  background-color: var(--cor-fundo);
+}
+
+.container-principal {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.coluna-esquerda {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.caixa-bemvindo {
+  position: relative;
+  background-color: var(--cor-fundo);
+  border: 2px solid var(--cor-borda);
+  border-radius: 10px;
+  padding: 40px 30px 0 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.subtitulo-boasvindas {
+  font-size: 22px;
+  letter-spacing: 3px;
+  color: var(--cor-marrom-nobre);
+  font-weight: 600;
+}
+
+.titulo-boasvindas {
+  font-family: var(--fonte-titulo);
+  font-size: 46px;
+  color: var(--cor-marrom-escuro);
+  letter-spacing: 2px;
+  margin: 5px 0 10px 0;
+  line-height: 1.1;
+}
+
+.texto-boasvindas {
+  color: var(--cor-texto);
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 420px;
+  margin: 0 auto 20px auto;
+}
+
+.btn-conheca {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(180deg, var(--cor-marrom-card) 0%, #1f0f06 100%);
+  color: var(--cor-dourado);
+  border: 1px solid var(--cor-borda);
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.btn-conheca:hover {
+  background: linear-gradient(180deg, var(--cor-dourado-claro) 0%, #997819 100%);
+  color: var(--cor-marrom-escuro);
+  transform: translateY(-2px);
+}
+
+.imagem-cavalos-caixa {
+  width: 100%;
+  margin-top: auto;
+}
+
+.imagem-cavalos-caixa img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-top: 1px solid rgba(140, 107, 58, 0.3);
+}
+
+.coluna-direita {
+  flex: 1.3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cabecalho-mapa {
+  background: linear-gradient(180deg, var(--cor-marrom-card) 0%, #1f0f06 100%);
+  color: var(--cor-dourado);
+  border: 1px solid var(--cor-borda);
+  padding: 8px 25px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.imagem-mapa-container {
+  width: 100%;
+}
+
+.img-mapa {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.rodape-mapa {
+  margin-top: 15px;
+  background-color: var(--cor-texto-claro);
+  border: 1px solid var(--cor-borda);
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--cor-marrom-nobre);
+  letter-spacing: 1px;
+}
+
+.rodape-mapa:hover {
+  background-color: var(--cor-marrom-nobre);
+  color: var(--cor-dourado-claro);
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .container-principal {
+    flex-direction: column;
+  }
+}
+
+/* SEÇÃO DE DIFERENCIAIS */
+.secao-diferenciais {
+  width: 100%;
+  padding: 60px 5%;
+  background-color: var(--cor-marrom-nobre);
+  color: var(--cor-texto-claro);
+}
+
+.container-diferenciais {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.titulo-diferenciais {
+  font-family: var(--fonte-titulo);
+  font-size: 28px;
+  color: var(--cor-dourado);
+  letter-spacing: 2px;
+}
+
+.cards-diferenciais {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.card-diferencial {
+  background: linear-gradient(180deg, #1f0b06 0%, #120503 100%);
+  border: 2px solid var(--cor-borda);
+  border-radius: 10px;
+  padding: 30px 20px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card-diferencial:hover {
+  transform: translateY(-10px);
+  border-color: 3px solid  var(--cor-dourado-claro);
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.2);
+}
+
+.icone-diferencial {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.card-diferencial h3 {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.card-diferencial p {
+  font-size: 13px;
+  color: #dcd0c0;
+  line-height: 1.6;
+}

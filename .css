@@ -1,0 +1,84 @@
+
+.flex-lugares {
+  display: flex;
+  
+  /*grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));*/
+  gap: 30px;
+  margin-top: 40px;
+
+  
+}
+
+
+.card-lugar {
+  background-color: #ffffff;
+  border: 2px solid var(--cor-borda);
+
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.card-lugar:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+}
+
+.card-lugar-img {
+  width: 100%;
+  height: 200px;
+}
+
+.card-lugar-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-lugar-info {
+  padding: 20px;
+}
+
+.card-lugar-info h3 {
+  font-family: var(--fonte-titulo);
+  font-size: 18px;
+  color: var(--cor-marrom-nobre);
+  margin-bottom: 8px;
+}
+
+.card-lugar-info p {
+  font-size: 13px;
+  color: var(--cor-texto);
+  line-height: 1.5;
+  margin: 0;
+}
+.container-carrossel-geral {
+  position: relative;
+  max-width: 1200px;
+  margin: 40px auto;
+  display: flex;
+  align-items: center;
+}
+
+.trilho-carrossel {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  scroll-behavior: smooth; /* Deixa o movimento fluido */
+  width: 100%;
+  padding: 10px 5px;
+  scrollbar-width: none; /* Esconde a barra de rolagem no Firefox */
+}
+
+.trilho-carrossel::-webkit-scrollbar {
+  display: none; /* Esconde a barra de rolagem no Chrome/Safari */
+}
+
+/* Tamanho fixo para cada card no carrossel */
+.trilho-carrossel .card-lugar {
+  min-width: 300px;
+  flex: 0 0 auto;
+}

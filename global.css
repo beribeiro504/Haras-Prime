@@ -1,0 +1,297 @@
+/* ==========================================================================
+   HARAS PRIME - CSS GLOBAL (Fontes, Reset, Variáveis e Estruturas Comuns)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIÁVEIS DE CORES GLOBAIS
+   -------------------------------------------------------------------------- */
+:root {
+  --cor-fundo: #f3e5d0;
+  --cor-fundo-secundaria: #e3d2ba;
+  --cor-marrom-escuro: #1a0803;
+  --cor-marrom-nobre: #2E0704;
+  --cor-marrom-card: #3d2210;
+  --cor-texto: #3d2210;
+  --cor-texto-claro: #dfc9a9;
+  --cor-dourado: #e5c76b;
+  --cor-dourado-claro: #d4af37;
+  --cor-borda: #8c6b3a;
+  --fonte-titulo: "Astronomus", "Conthrax", Georgia, serif;
+  --fonte-corpo: "conthrax-semibold", sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   2. FONTES PERSONALIZADAS
+   -------------------------------------------------------------------------- */
+@font-face {
+  font-family: "Astronomus";
+  src: url("../fontes/Astronomus.ttf");
+}
+
+@font-face {
+  font-family: "relidux";
+  src: url("../fontes/Relidux.otf");
+}
+
+@font-face {
+  font-family: "conthrax-semibold";
+  src: url("../fontes/Conthrax-SemiBold.otf");
+}
+
+/* --------------------------------------------------------------------------
+   3. RESET E CONFIGURAÇÕES GLOBAIS
+   -------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
+}
+
+body {
+  text-align: center;
+  background-color: var(--cor-fundo);
+  font-family: var(--fonte-corpo);
+  color: var(--cor-marrom-nobre);
+  overflow-y: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Padronização Global de Títulos e Parágrafos */
+h1, h2, h3, h4 {
+  font-family: var(--fonte-titulo);
+  letter-spacing: 2px;
+}
+
+p {
+  font-family: var(--fonte-corpo);
+  line-height: 1.6;
+}
+
+/* Divisor Dourado Padrão */
+.divisor-dourado {
+  color: var(--cor-borda);
+  font-size: 14px;
+  margin: 15px 0;
+}
+
+.divisor-dourado::before,
+.divisor-dourado::after {
+  content: "";
+  display: inline-block;
+  width: 60px;
+  height: 1px;
+  background-color: var(--cor-borda);
+  vertical-align: middle;
+  margin: 0 10px;
+}
+
+/* --------------------------------------------------------------------------
+   4. CABEÇALHO & MENU DE NAVEGAÇÃO
+   -------------------------------------------------------------------------- */
+.cabecalho {
+  width: 100%;
+  padding: 15px 5%;
+  background: linear-gradient(180deg, #1f0b06 0%, var(--cor-marrom-escuro) 100%);
+  border-bottom: 2px solid var(--cor-borda);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 1000;
+}
+
+.cabecalho-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo-marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.logo-texto h1 {
+  font-family: var(--fonte-titulo);
+  font-size: 20px;
+  color: var(--cor-texto-claro);
+  margin: 0;
+  line-height: 1;
+}
+
+.logo-texto span {
+  font-size: 8px;
+  color: #a68960;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 4px;
+}
+
+.menu-navegacao {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.link-menu {
+  color: #dcd0c0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  padding: 8px 12px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.link-menu:hover,
+.link-menu.ativo {
+  color: #ffffff;
+}
+
+.link-menu::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--cor-dourado-claro);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.link-menu:hover::after,
+.link-menu.ativo::after {
+  width: 80%;
+}
+
+.btn-comprar-cavalo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(180deg, var(--cor-marrom-card) 0%, #1f0f06 100%);
+  color: var(--cor-dourado);
+  border: 1px solid var(--cor-borda);
+  outline: 1px solid var(--cor-marrom-card);
+  outline-offset: -3px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-comprar-cavalo:hover {
+  background: linear-gradient(180deg, var(--cor-dourado-claro) 0%, #997819 100%);
+  color: var(--cor-marrom-escuro);
+  border-color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+@media (max-width: 900px) {
+  .cabecalho-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .menu-navegacao {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .link-menu {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. RODAPÉ GLOBAL SIMPLES
+   -------------------------------------------------------------------------- */
+.rodape-simples {
+  background-color: var(--cor-marrom-escuro);
+  color: var(--cor-texto-claro);
+  border-top: 2px solid var(--cor-borda);
+  padding: 25px 20px 15px 20px;
+  text-align: center;
+}
+
+.container-rodape-simples {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.marca-rodape {
+  font-size: 15px;
+  color: var(--cor-dourado);
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.contatos-rodape {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-rodape {
+  color: var(--cor-texto-claro);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px 14px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn-rodape:hover {
+  background-color: var(--cor-borda);
+  color: var(--cor-marrom-escuro);
+}
+
+.copia-rodape {
+  margin-top: 20px;
+  font-size: 11px;
+  color: var(--cor-borda);
+  border-top: 1px solid rgba(140, 107, 58, 0.2);
+  padding-top: 10px;
+}

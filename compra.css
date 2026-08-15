@@ -1,0 +1,155 @@
+/* ==========================================================================
+   HARAS PRIME - COMPRA.CSS
+   ========================================================================== */
+.formulario {
+    padding: 40px;
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-borda);
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formulario label {
+    font-size: 18px;
+    color: var(--cor-marrom-nobre);
+    font-weight: bold;
+    text-align: justify;
+}
+
+.formulario input,
+.formulario select {
+    padding: 12px;
+    border: 2px solid #6D4C41;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    outline: none;
+    background-color: #fff;
+}
+
+.formulario option {
+    padding: 12px;
+    font-size: 16px;
+}
+
+.formulario button {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: #6D1B0D;
+    color: var(--cor-fundo);
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.formulario button:hover {
+    background-color: var(--cor-dourado-claro);
+    color: var(--cor-fundo);
+    transform: scale(1.05);
+}
+
+.preview-cavalo {
+    display: none;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.preview-cavalo h2 {
+    margin-top: 10px;
+    color: #6D1B0D;
+    font-family: var(--fonte-titulo);
+}
+
+.preco-cavalo {
+    margin-top: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--cor-dourado-claro);
+    letter-spacing: 1px;
+}
+
+.mini-carrossel {
+    position: relative;
+    width: 350px;
+    height: 250px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.mini-carrossel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.55);
+    color: var(--cor-fundo);
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 2;
+    transition: 0.3s ease;
+}
+
+.seta:hover {
+    background-color: #6D1B0D;
+}
+
+.esquerda {
+    left: -5px;
+}
+
+.direita {
+    right: -5px;
+}
+
+.indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.indicador {
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+    background-color: #6D1B0D;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.indicador.ativo {
+    background-color: var(--cor-dourado-claro);
+    box-shadow: 0 0 0 2px var(--cor-fundo);
+}
+
+.rodape {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--cor-fundo);
+    color: #6D1B0D;
+    font-size: 16px;
+    border-top: 2px solid var(--cor-dourado-claro);
+}

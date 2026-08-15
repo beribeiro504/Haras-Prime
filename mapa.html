@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Mapa e Instalações - Haras Prime</title>
+  
+  <link rel="shortcut icon" href="imagens/logo.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="mapa.css">
+
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="cabecalho-container">
+      <a href="index.html" class="logo-marca">
+        <img src="imagens/logo.png" alt="Logo Haras Prime" class="logo-img">
+        <div class="logo-texto">
+          <h1>HARAS PRIME</h1>
+          <span>Tradição, Paixão e Excelência</span>
+        </div>
+      </a>
+      
+      <nav class="menu-navegacao">
+        <a href="index.html" class="link-menu">Início</a>
+        <a href="sobre.html" class="link-menu">Sobre Nós</a>
+        <a href="servicos.html" class="link-menu">Serviços</a>
+        <a href="mapa.html" class="link-menu ativo">Mapa & Estrutura</a>
+        <a href="galeria.html" class="link-menu">Galeria</a>
+        
+        <a href="compra.html" class="btn-comprar-cavalo">🐎 COMPRE SEU CAVALO</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    
+    <section class="secao-mapa-topo">
+      <div class="container-mapa">
+        <h1 class="titulo-pagina">MAPA DO HARAS</h1>
+        <div class="divisor-dourado"><span>◆</span></div>
+        <p class="subtitulo-pagina">Conheça a nossa propriedade e localização estratégica.</p>
+        
+        <div class="moldura-mapa-grande">
+          <img src="imagens/foto do haras/mapa.haras.prime.png" alt="Mapa Geral do Haras Prime" class="img-mapa-destaque">
+        </div>
+      </div>
+    </section>
+
+    <section class="secao-lugares">
+      <div class="container-mapa">
+        <h2 class="titulo-secao">NOSSAS INSTALAÇÕES</h2>
+        <div class="divisor-dourado"><span>◆</span></div>
+        <p class="subtitulo-pagina">Espaços projetados para o conforto, segurança e alto desempenho dos animais.</p>
+
+        <div class="container-carrossel-geral">
+          
+          <button class="seta-carrossel esquerda" onclick="mudarCardManual(-1)">&#10094;</button>
+          
+          <div class="trilho-carrossel" id="trilhoCards">
+            
+            <div class="card-lugar">
+              <div class="card-lugar-img">
+                <img src="imagens/foto do haras/entrada.jpeg" alt="Entrada Principal">
+              </div>
+              <div class="card-lugar-info">
+                <h3>Entrada Principal</h3>
+                <p>Portal imponente com segurança e controle de acesso, refletindo a sofisticação e tradição do haras.</p>
+              </div>
+            </div>
+
+            <div class="card-lugar">
+              <div class="card-lugar-img">
+                <img src="imagens/foto do haras/adm.png" alt="Administração">
+              </div>
+              <div class="card-lugar-info">
+                <h3>Administração</h3>
+                <p>Escritório central para atendimento aos clientes, negociações e gestão de documentos e registros genealógicos.</p>
+              </div>
+            </div>
+
+            <div class="card-lugar">
+              <div class="card-lugar-img">
+                <img src="imagens/foto do haras/baias.png" alt="Baias de Alta Qualidade">
+              </div>
+              <div class="card-lugar-info">
+                <h3>Complexo de Baias</h3>
+                <p>Ambientes arejados, seguros e higienizados diariamente para o descanso e bem-estar dos animais.</p>
+              </div>
+            </div>
+
+            <div class="card-lugar">
+              <div class="card-lugar-img">
+                <img src="imagens/foto do haras/pista de treino.png" alt="Pista de Treinamento">
+              </div>
+              <div class="card-lugar-info">
+                <h3>Pista de Treinamento Coberta</h3>
+                <p>Estrutura profissional com piso adequado para o desenvolvimento da marcha e manobras.</p>
+              </div>
+            </div>
+
+            <div class="card-lugar">
+              <div class="card-lugar-img">
+                <img src="imagens/foto do haras/picadeiro.png" alt="Picadeiro Coberto">
+              </div>
+              <div class="card-lugar-info">
+                <h3>Picadeiro Coberto</h3>
+                <p>Ampla estrutura coberta projetada para treinamentos e avaliações protegido de intempéries em qualquer época do ano.</p>
+              </div>
+            </div>
+
+            <div class="card-lugar">
+              <div class="card-lugar-img">
+                <img src="imagens/foto do haras/redondel.png" alt="Redondel">
+              </div>
+              <div class="card-lugar-info">
+                <h3>Redondel</h3>
+                <p>Espaço circular fechado ideal para doma racional, amestramento inicial e avaliações de movimentação.</p>
+              </div>
+            </div>
+
+            <div class="card-lugar">
+              <div class="card-lugar-img">
+                <img src="imagens/foto do haras/piquetes.png" alt="Piquetes de Pastagem">
+              </div>
+              <div class="card-lugar-info">
+                <h3>Piquetes e Pastagens</h3>
+                <p>Grandes áreas verdes formadas com capim de alta qualidade para soltura e pastejo diário.</p>
+              </div>
+            </div>
+
+            <div class="card-lugar">
+              <div class="card-lugar-img">
+                <img src="imagens/foto do haras/haras.imagens (5).png" alt="Depósito e Equipamentos">
+              </div>
+              <div class="card-lugar-info">
+                <h3>Depósito de Equipamentos</h3>
+                <p>Armazenamento adequado para selas, arreios, rações, fardos de feno e maquinário agrícola do haras.</p>
+              </div>
+            </div>
+
+            <div class="card-lugar">
+              <div class="card-lugar-img">
+                <img src="imagens/foto do haras/veterinario.png" alt="Centro Veterinário">
+              </div>
+              <div class="card-lugar-info">
+                <h3>Centro Veterinário</h3>
+                <p>Espaço equipado para exames, acompanhamento reprodutivo e cuidados de saúde preventiva.</p>
+              </div>
+            </div>
+
+            <div class="card-lugar">
+              <div class="card-lugar-img">
+                <img src="imagens/foto do haras/galeria-trofeu.png" alt="Galeria de Troféus">
+              </div>
+              <div class="card-lugar-info">
+                <h3>Galeria de Troféus</h3>
+                <p>Espaço dedicado a expor as premiações, faixas e títulos conquistados pelos exemplares do Haras Prime.</p>
+              </div>
+            </div>
+
+            <div class="card-lugar">
+              <div class="card-lugar-img">
+                <img src="imagens/foto do haras/estacionamento.png" alt="Estacionamento">
+              </div>
+              <div class="card-lugar-info">
+                <h3>Estacionamento</h3>
+                <p>Área ampla, arborizada e pavimentada para acomodar com total conforto e segurança os veículos.</p>
+              </div>
+            </div>
+
+            <div class="card-lugar">
+              <div class="card-lugar-img">
+                <img src="imagens/foto do haras/area de lazer.png" alt="Área de Lazer">
+              </div>
+              <div class="card-lugar-info">
+                <h3>Área de Lazer</h3>
+                <p>Espaço aconchegante de convivência para receber criadores, amigos e familiares.</p>
+              </div>
+            </div>
+
+            <div class="card-lugar">
+              <div class="card-lugar-img">
+                <img src="imagens/foto do haras/lago.png" alt="Lago">
+              </div>
+              <div class="card-lugar-info">
+                <h3>Lago do Haras</h3>
+                <p>Paisagismo natural que embeleza a propriedade, proporcionando um microclima agradável.</p>
+              </div>
+            </div>
+
+            <div class="card-lugar">
+              <div class="card-lugar-img">
+                <img src="imagens/foto do haras/trilha.png" alt="Trilha e Cavalgadas">
+              </div>
+              <div class="card-lugar-info">
+                <h3>Trilhas para Cavalgadas</h3>
+                <p>Caminhos cercados pela natureza nativa perfeitos para testar a comodidade da marcha.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <button class="seta-carrossel direita" onclick="mudarCardManual(1)">&#10095;</button>
+          
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+    <script>
+      const trilho = document.getElementById('trilhoCards');
+      const larguraPasso = 405; // Largura do card (380px) + gap (25px)
+      let intervaloCarrossel;
+
+      function proximoCard() {
+        if (trilho.scrollLeft + trilho.clientWidth >= trilho.scrollWidth - 10) {
+          trilho.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          trilho.scrollBy({ left: larguraPasso, behavior: 'smooth' });
+        }
+      }
+
+      function iniciarAutomacao() {
+        intervaloCarrossel = setInterval(proximoCard, 3000); // Roda a cada 3 segundos
+      }
+
+      function mudarCardManual(direcao) {
+        clearInterval(intervaloCarrossel); // Pausa a automação ao interagir
+        trilho.scrollBy({ left: direcao * larguraPasso, behavior: 'smooth' });
+        iniciarAutomacao(); // Reinicia o timer
+      }
+
+      // Inicia o carrossel automático ao carregar a página
+      window.onload = function() {
+        iniciarAutomacao();
+      };
+
+      /* ===========================
+        CONTROLE POR TECLADO (← e →)
+        =========================== */
+      document.addEventListener("keydown", function(event) {
+        // Se o carrossel não estiver visível na tela, você pode opcionalmente verificar,
+        // mas aqui ele vai disparar sempre que as setas forem pressionadas:
+
+        if (event.key === "ArrowRight" || event.key === "e") {
+          mudarCardManual(1); // Vai para o próximo card
+        }
+
+        if (event.key === "ArrowLeft" || event.key === "q") {
+          mudarCardManual(-1); // Volta para o card anterior
+        }
+      });
+      
+    </script>
+
+  <footer class="rodape-simples">
+    <div class="container-rodape-simples">
+      <p class="marca-rodape"><strong>HARAS PRIME</strong> — Tradição e Excelência</p>
+      <div class="contatos-rodape">
+        <a href="https://wa.me/5573981371591" target="_blank" class="btn-rodape">💬 (73) 98137-1591</a>
+        <a href="https://www.instagram.com/hara_sprime?igsh=cjZ5ajZlYTh0eXRv" target="_blank" class="btn-rodape">📷 @hara_sprime</a>
+      </div>
+    </div>
+    <div class="copia-rodape">
+      &copy; 2026 Haras Prime. Todos os direitos reservados.
+    </div>
+  </footer>
+
+</body>
+</html>
