@@ -42,9 +42,118 @@
 .img-mapa-destaque {
   width: 100%;
   max-height: 550px;
-  
   border-radius: 6px;
   display: block;
+}
+
+.mapa-container {
+  position: relative;
+  max-width: 1100px;
+  margin: 30px auto 0;
+  overflow: hidden;
+}
+
+.ponto {
+  position: absolute;
+  width: clamp(15px, 1.9vw, 22px);
+  height: clamp(15px, 1.9vw, 22px);
+  border: 2px solid #f5e8c8;
+  border-radius: 50%;
+  background: rgba(98, 57, 20, 0.9);
+  color: #f7f1dd;
+  font-family: var(--fonte-titulo, Georgia, serif);
+  font-size: clamp(0.52rem, 0.8vw, 0.7rem);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.18), 0 4px 10px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ponto:hover {
+  transform: translate(-50%, -50%) scale(1.08);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.22), 0 6px 12px rgba(0, 0, 0, 0.22);
+}
+
+.mapa-preview {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid rgba(245, 232, 200, 0.95);
+  background-color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  z-index: 12;
+  overflow: visible;
+}
+
+.mapa-preview.ativo {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.mapa-preview-nome {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 8px);
+  transform: translateX(-50%);
+  background: rgba(40, 18, 8, 0.9);
+  color: #fff;
+  text-align: center;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  display: none;
+}
+
+.p-1 { left: 68.2%; top: 79.4%; }
+.p-2 { left: 60.2%; top: 59.1%; }
+.p-3 { left: 39.8%; top: 52.9%; }
+.p-3-extra { left: 29.1%; top: 42.4%; }
+.p-4 { left: 61.8%; top: 20.2%; }
+.p-5 { left: 62.1%; top: 41.2%; }
+.p-6 { left: 45.2%; top: 43.8%; }
+.p-7 { left: 18.1%; top: 33.2%; }
+.p-7-extra { left: 26.0%; top: 62.8%; }
+.p-8 { left: 33.5%; top: 69.8%; }
+.p-9 { left: 11.4%; top: 39.1%; }
+.p-10 { left: 51.0%; top: 73.1%; }
+.p-11 { left: 19.3%; top: 49.0%; }
+.p-12 { left: 22.2%; top: 71.3%; }
+.p-13 { left: 38.2%; top: 20.3%; }
+.p-14 { left: 8.8%; top: 63.7%; }
+
+@media (max-width: 768px) {
+  .mapa-container {
+    max-width: 100%;
+  }
+
+  .mapa-preview {
+    width: 120px;
+    height: 120px;
+  }
+
+  .ponto {
+    width: 18px;
+    height: 18px;
+    font-size: 0.56rem;
+  }
 }
 
 /* --- SEÇÃO DOS LUGARES (EMBAIXO) --- */

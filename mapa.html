@@ -42,8 +42,32 @@
         <div class="divisor-dourado"><span>◆</span></div>
         <p class="subtitulo-pagina">Conheça a nossa propriedade e localização estratégica.</p>
         
-        <div class="moldura-mapa-grande">
-          <img src="imagens/foto do haras/mapa.haras.prime.png" alt="Mapa Geral do Haras Prime" class="img-mapa-destaque">
+        
+        <div class="moldura-mapa-grande mapa-container">
+          
+          <img src="imagens/foto do haras/haras.mapa.png" alt="Mapa Geral do Haras Prime" class="img-mapa-destaque">
+          <div class="mapa-preview" id="mapaPreview" aria-hidden="true">
+            <span class="mapa-preview-nome" id="mapaPreviewNome">Pista de Treino</span>
+          </div>
+
+          <!-- Os 14 pontos interativos que vão por cima da imagem -->
+          <button class="ponto p-1" title="1. Entrada Principal" data-image="imagens/foto do haras/entrada.jpeg">1</button>
+          <button class="ponto p-2" title="2. Administração" data-image="imagens/foto do haras/adm.png">2</button>
+          <button class="ponto p-3" title="3. Baias" data-image="imagens/foto do haras/baias (2).png">3</button>
+          <button class="ponto p-3-extra" title="3. Baias" data-image="imagens/foto do haras/baias (3).png">3</button>
+          <button class="ponto p-4" title="4. Pista de Treino" data-image="imagens/foto do haras/pista de treino.png">4</button>
+          <button class="ponto p-5" title="5. Picadeiro Coberto" data-image="imagens/foto do haras/picadeiro.png">5</button>
+          <button class="ponto p-6" title="6. Redondél" data-image="imagens/foto do haras/redondel.png">6</button>
+          <button class="ponto p-7" title="7. Piquetes" data-image="imagens/foto do haras/piquetes (2).png">7</button>
+          <button class="ponto p-7-extra" title="7. Piquetes" data-image="imagens/foto do haras/piquetes.png">7</button>
+          <button class="ponto p-8" title="8. Depósito / Equipamentos" data-image="imagens/foto do haras/haras.imagens (5).png">8</button>
+          <button class="ponto p-9" title="9. Veterinário" data-image="imagens/foto do haras/veterinario.png">9</button>
+          <button class="ponto p-10" title="10. Estacionamento" data-image="imagens/foto do haras/estacionamento.png">10</button>
+          <button class="ponto p-11" title="11. Galeria de Troféus" data-image="imagens/foto do haras/galeria-trofeu.png">11</button>
+          <button class="ponto p-12" title="12. Área de Lazer" data-image="imagens/foto do haras/area de lazer.png">12</button>
+          <button class="ponto p-13" title="13. Lago" data-image="imagens/foto do haras/lago.png">13</button>
+          <button class="ponto p-14" title="14. Trilha e Cavalgadas" data-image="imagens/foto do haras/trilha.png">14</button>
+
         </div>
       </div>
     </section>
@@ -252,6 +276,52 @@
         if (event.key === "ArrowLeft" || event.key === "q") {
           mudarCardManual(-1); // Volta para o card anterior
         }
+      });
+
+      const preview = document.getElementById('mapaPreview');
+      const previewNome = document.getElementById('mapaPreviewNome');
+      const mapaContainer = document.querySelector('.mapa-container');
+
+      const mostrarPreview = (event) => {
+        const botao = event.currentTarget;
+        const imagem = botao.dataset.image;
+        const nome = botao.getAttribute('title');
+
+        if (!imagem || !preview) return;
+
+        preview.style.backgroundImage = `url('${imagem}')`;
+        preview.classList.add('ativo');
+
+        if (previewNome && nome) {
+          previewNome.textContent = nome.replace(/^\d+\.\s*/, '');
+          previewNome.style.display = 'block';
+        } else if (previewNome) {
+          previewNome.style.display = 'none';
+        }
+
+        const containerRect = mapaContainer.getBoundingClientRect();
+        const x = event.clientX - containerRect.left;
+        const y = event.clientY - containerRect.top;
+
+        preview.style.left = `${Math.min(Math.max(x + 26, 80), containerRect.width - 80)}px`;
+        preview.style.top = `${Math.min(Math.max(y - 26, 80), containerRect.height - 80)}px`;
+      };
+
+      const esconderPreview = () => {
+        if (preview) {
+          preview.classList.remove('ativo');
+        }
+        if (previewNome) {
+          previewNome.style.display = 'none';
+        }
+      };
+
+      document.querySelectorAll('.ponto').forEach((botao) => {
+        botao.addEventListener('mouseenter', mostrarPreview);
+        botao.addEventListener('mousemove', mostrarPreview);
+        botao.addEventListener('mouseleave', esconderPreview);
+        botao.addEventListener('focus', mostrarPreview);
+        botao.addEventListener('blur', esconderPreview);
       });
       
     </script>
